@@ -1,0 +1,9 @@
+version: "3.9"
+
+services:
+  opa-keycloak-middleware:
+    build: .
+    container_name: opa-keycloak-middleware
+    ports:
+      - "8888:8888"
+    env_file: ".env"

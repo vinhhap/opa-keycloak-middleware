@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "opa-keycloak-middleware"
+version = "0.1.0"
+description = ""
+authors = ["Quan Nguyen <nguyennamquan1996@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fastapi = "^0.115.5"
+python-keycloak = "^4.7.1"
+uvicorn = "^0.32.0"
+structlog = "^24.4.0"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.3"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+start = "opa_keycloak_middleware.main:main"
