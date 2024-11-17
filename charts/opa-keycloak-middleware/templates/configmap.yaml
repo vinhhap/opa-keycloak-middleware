@@ -5,8 +5,8 @@ metadata:
   labels:
     {{- include "opa_kecloak_middleware.labels" . | nindent 4 }}
 data:
-  FASTAPI_PORT: {{ .Values.middlewareConfig.fastApiPort }}
-  FASTAPI_NUM_WORKERS: {{ .Values.middlewareConfig.fastapiNumWorkers }}
+  FASTAPI_PORT: "{{ .Values.middlewareConfig.fastApiPort }}"
+  FASTAPI_NUM_WORKERS: "{{ .Values.middlewareConfig.fastapiNumWorkers }}"
 {{- if .Values.middlewareConfig.appRootPath}}
   APP_ROOT_PATH: {{ .Values.middlewareConfig.appRootPath }}
 {{- end }}
