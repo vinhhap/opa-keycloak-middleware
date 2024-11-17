@@ -23,17 +23,6 @@ jobs:
           git config user.name "$GITHUB_ACTOR"
           git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
 
-      - name: Setup Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.11' 
-
-      - name: Install Frigate
-        run: pip install frigate==0.7.0
-
-      - name: Generate readme
-        run: frigate gen charts/opa_kecloak_middleware > charts/opa_kecloak_middleware/README.md
-
       - name: Install Helm
         uses: azure/setup-helm@v3
 
