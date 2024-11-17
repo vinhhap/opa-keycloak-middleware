@@ -1,5 +1,5 @@
 
-Opa_keycloak_middleware
+Opa Keycloak Middleware
 ===========
 
 A Helm chart for Kubernetes
@@ -7,7 +7,7 @@ A Helm chart for Kubernetes
 
 ## Configuration
 
-The following table lists the configurable parameters of the Opa_keycloak_middleware chart and their default values.
+The following table lists the configurable parameters of the Opa Keycloak Middleware chart and their default values.
 
 | Parameter                | Description             | Default        |
 | ------------------------ | ----------------------- | -------------- |
