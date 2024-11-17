@@ -97,7 +97,7 @@ affinity: {}
 
 middlewareConfig:
   # Number of FastAPI workers
-  fastapiNumWorkers: 2
+  fastapiNumWorkers: "2"
   appRootPath: ""
   # API Key using to authenticate the service (is omitted when `secretConfig` is used)
   auth:
