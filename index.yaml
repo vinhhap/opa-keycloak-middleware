@@ -1,5 +1,16 @@
 apiVersion: v1
 entries:
+  opa-keycloak-middleware:
+  - apiVersion: v2
+    appVersion: 0.1.0
+    created: "2024-11-17T06:23:52.161529227Z"
+    description: A Helm chart for Kubernetes
+    digest: a269f17fd27392e110b7c6c611a75d580638866349de75b61d3549cc7928b4fa
+    name: opa-keycloak-middleware
+    type: application
+    urls:
+    - opa-keycloak-middleware-0.1.0.tgz
+    version: 0.1.0
   opa_kecloak_middleware:
   - apiVersion: v2
     appVersion: 1.16.0
@@ -22,4 +33,4 @@ entries:
     urls:
     - opa_keycloak_middleware-0.1.0.tgz
     version: 0.1.0
-generated: "2024-11-17T06:11:06.108335756Z"
+generated: "2024-11-17T06:23:52.16153598Z"
