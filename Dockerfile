@@ -1,4 +1,5 @@
-FROM python:3.11-buster
+# The builder image, used to build the virtual environment
+FROM python:3.11-buster AS builder
 
 RUN pip install poetry==1.8.4
 
@@ -11,10 +12,22 @@ WORKDIR /app
 
 COPY pyproject.toml ./
 
-RUN poetry install --without dev --no-root && rm -rf $POETRY_CACHE_DIR
+RUN --mount=type=cache,target=$POETRY_CACHE_DIR poetry install --without dev --no-root
 
-COPY opa_keycloak_middleware ./opa_keycloak_middleware
+# The runtime image, used to just run the code provided its virtual environment
+FROM python:3.11-slim-buster AS runtime
 
-RUN poetry install --without dev
+ENV VIRTUAL_ENV=/app/.venv \
+    PATH="/app/.venv/bin:$PATH"
 
-ENTRYPOINT ["poetry", "run", "start"]
+ENV FASTAPI_NUM_WORKERS=4 \
+    FASTAPI_PORT=80
+
+COPY --from=builder ${VIRTUAL_ENV} ${VIRTUAL_ENV}
+
+COPY app ./app
+COPY scripts ./scripts
+
+RUN chmod +x -R scripts/*
+
+ENTRYPOINT [ "scripts/entrypoint.sh" ]

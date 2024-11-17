@@ -13,7 +13,7 @@ app = FastAPI(
 )
 logger = structlog.get_logger()
 
-UVICORN_PORT = os.environ.get("UVICORN_PORT", "8888")
+UVICORN_PORT = os.environ.get("UVICORN_PORT", "80")
 APP_ROOT_PATH = os.environ.get("APP_ROOT_PATH", "")
 
 @app.middleware("http")

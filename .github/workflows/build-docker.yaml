@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - main
+    paths:
+      - app/**
 
 env:
   DOCKER_IMAGE_NAME: qnguyen3496/opa-keycloak-middleware
