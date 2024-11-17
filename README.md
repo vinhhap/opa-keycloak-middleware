@@ -1,0 +1,1 @@
+# OPA Keycloak middleware for Trino
