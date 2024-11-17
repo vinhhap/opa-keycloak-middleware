@@ -1,0 +1,14 @@
+apiVersion: v1
+entries:
+  opa_kecloak_middleware:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2024-11-17T05:56:51.275077779Z"
+    description: A Helm chart for Kubernetes
+    digest: 39c8e06f54bfb2cba4b9be9b44e0e965be3c7c70f76bec23463c4cbcd9223884
+    name: opa_kecloak_middleware
+    type: application
+    urls:
+    - opa_kecloak_middleware-0.1.0.tgz
+    version: 0.1.0
+generated: "2024-11-17T05:56:51.2750837Z"
